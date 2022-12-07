@@ -1,0 +1,28 @@
+.app_contact-container-top{
+      width: 90%;
+      margin-bottom: -80px;
+      background-color: #FFF;
+}
+.app_contact-top{
+      background-color: transparent;
+      width: 100%;
+}
+.app_instagram-container-top{
+      width: 90%;
+      background-color: transparent;
+      margin-bottom: -200px;
+      
+}
+.app_instagram-top{
+      background-color: transparent;
+      width: 100%;  
+}
+@media screen and (max-width: 900px) {
+      .app_contact-container-top{
+            display: none;
+      }
+      .app_instagram-container-top{
+            display: none;
+      }
+
+}

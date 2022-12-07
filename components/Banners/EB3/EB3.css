@@ -1,0 +1,92 @@
+.app_banner_eb3-container{
+      width: 90%;
+      padding:40px 30px 30px 30px;
+      background-color: #FFF;
+      border-radius: 32px;
+      max-height: 657px;
+      max-width: 1337px;
+      box-shadow: 0px 0px 20px 3px rgba(123, 188, 255, 0.07);
+      border-radius: 60px; 
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+}
+.app_banner_eb3-title{
+      text-align: left;
+      font-size: 55px;
+      font-weight: 700;
+      line-height: 121%;
+      width: 485px;
+      color: #768899;
+      margin: 30px 0px;
+      font-family: 'K2D', sans-serif;
+}
+.app_banner_eb3-text{
+      text-align: left;
+      width: 488px;
+      line-height: 23px;
+      color: #768899;
+      margin: 0px 0px 30px 0px ;
+     
+}
+.app_banner_eb3-content{
+      display: flex;
+      text-align: left;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 488px;
+}
+span.blue{
+      color: #2A3894;
+}
+.app_banner_eb3-image{
+      max-width: 590px;
+}
+.app_banner_eb3{
+      width: 100%;
+      height: auto;
+     
+}
+.app_banner_eb3-content{
+      width: 50%;
+}
+@media screen and (max-width: 450px) {
+      p.app_banner_eb3-title {
+            font-size: 35px;
+            line-height: 38.5px;
+        }
+      p.app_banner_eb3-text {
+            font-size: 13px;
+            line-height: 17px;
+      }
+}
+@media screen and (max-width: 900px) {
+
+      .app_banner_eb3-container{
+            width: 100%;
+            border-radius: 0px;
+            flex-direction: column;
+            box-shadow: none; 
+            padding: 0px 0px 30px 0px;
+            max-height: unset;
+      }
+      .app_banner_eb3-content{
+            width: 80%;
+      }
+      .app_banner_eb3-image{
+            margin-top: 30px;
+            width: 80%;
+      }
+      .app_banner_eb3{
+            width: 100%;
+      }
+      .app_banner_eb3-text{
+            width: 100%;
+      }
+      .app_banner_eb3-title{
+            font-size: 35px;
+            width: 100%;
+      }
+      
+}

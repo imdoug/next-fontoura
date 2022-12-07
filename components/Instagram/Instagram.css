@@ -1,0 +1,90 @@
+.app_instagram-container-master{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: -200px;
+}
+.app_instagram-container{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+}
+.app_instagram-posts-container{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      background-color: #fff;
+}
+.app_instagram-container h2{
+      margin-bottom: -15px;
+}
+.app_instagram-container p{
+      margin-bottom: 60px;
+}
+.app_instagram-post{
+      margin-top: 20px;
+      width: 330px;
+      height: 350px;
+      z-index: 5;
+      box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.11);
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+}
+.app_instagram-title{
+      Font-weight: 800;
+      font-size: 55px;
+      line-height: 121%;
+      color: var(--color-blue);
+      font-family: 'K2D', sans-serif;
+      margin: 0px;
+}
+.app_instagram-ig{
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+      color: #768899;
+      text-transform: none;
+}
+.app_instagram-post-link{
+      width: 100%;
+}
+.app_instagram-post-img{
+      object-fit: cover;
+      height: auto;
+      width: 100%;
+}
+  
+@media screen and (max-width: 900px) {
+      .app_instagram-container-master{
+            width: 100%;
+            margin-bottom: 0px;
+      }
+      .app_instagram-container{
+            width: 100%;
+            background-color: #fff;
+      }
+      .app_instagram-posts-container{
+            flex-direction: row;
+      }
+      .app_instagram-post{
+            max-width: 330px;
+      }
+      .app_instagram-title{
+            margin-top: 20px;
+            font-size: 35px;
+            line-height: 124%;
+      }
+      .app_instagram-ig{
+            font-size: 13px;
+            line-height: 21px;
+      }
+      
+}

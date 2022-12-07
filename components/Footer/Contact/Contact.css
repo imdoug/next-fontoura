@@ -1,0 +1,108 @@
+.app_contact-container{
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 50px 0px;
+}
+.app_contact-section1{
+      width: 38%;
+}
+.app_contact-title{
+      text-align: start;
+      font-size: 4rem;
+      font-weight: 800;
+      margin: 0 0 50px 0;
+      font-family: 'K2D', sans-serif;
+      line-height: 121%;
+}
+.app_contact-items{
+      width:60%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 150px;
+}
+.app_contact-items-img{
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+      height: 150px;
+}
+.app_contact-info-items{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 60%;
+      height: 50px;
+}
+.app_contact-info-item{
+      width: 40%;
+}
+.app_contact-info-star{
+      width: 20%;
+}
+.app_contact-star{
+      width: 20%;
+}
+.app_contact-info-content{
+      width: 100%;
+      display: flex;
+      align-items: center;
+}
+.app_contact-info-icon{
+      background-color: #FFF;
+      padding: 8px 8px;
+      border-radius: 50%;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+}
+.app_contact-star{
+      width: 120px;
+}
+.app_contact-container-top{
+      width: 90%;
+      margin-bottom: -80px;
+}
+.app_contact-top{
+      background: transparent;
+      width: 100%;
+}
+.app_contact-info-text{
+      font-size: 14px;
+}
+/* before or after  image to add the stars  */
+@media screen and (max-width: 900px) {
+      .app_contact-container{
+            flex-direction: column;
+      }
+      .app_contact-section1{
+            width: 100%;
+      }
+      .app_contact-info{
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: start;
+
+      }
+      .app_contact-title{
+            font-size: 3rem;
+      }.app_contact-items{
+            margin-top: 40px;
+            width: 100%;
+            margin-bottom: 20px;
+      }
+      .app_contact-info-items{
+          flex-direction: column; 
+          height: fit-content;
+      }
+      .app_contact-info-item{
+            width: 100%;
+      }
+      
+}
