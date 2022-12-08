@@ -1,0 +1,11 @@
+ export { default as About} from './About/About'
+ export { default as EB3} from './Banners/EB3/EB3'
+ export { default as Guide} from './Banners/Guide/Guide'
+export { default as Carousel} from './Carousel/Slider'
+ export { default as Expertise} from './Expertise/Expertise'
+export { default as Instagram} from './Instagram/Instagram'
+export { default as InstaPost} from './InstaPost/InstaPost'
+export { default as News} from './News/News'
+export { default as Header} from './Header'
+export { default as Footer} from './Footer/Footer'
+
