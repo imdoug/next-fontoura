@@ -7,15 +7,15 @@ import {
   RiLinkedinBoxLine,
 } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
 const EmailForm = () => {
-  const {t} = useTranslation('common');
+  const {t} = useTranslation('home');
   const [successModal,setSuccessModal] = useState(false)
   const form = useRef();
   const sendEmail = (e) =>{
     e.preventDefault()
-    emailjs.sendForm(process.env.REACT_APP_PUBLIC_EMAIL_SERVICE, process.env.REACT_APP_PUBLIC_EMAIL_TEMPLATE, form.current, process.env.REACT_APP_PUBLIC_KEY)
+    emailjs.sendForm(process.env.NEXT_PUBLIC_EMAIL_SERVICE, process.env.NEXT_PUBLIC_EMAIL_TEMPLATE, form.current, process.env.NEXT_PUBLIC_KEY)
       .then((result) => {
           setSuccessModal(true)
           form.current.reset();
@@ -91,12 +91,5 @@ const EmailForm = () => {
     </>
   );
 };
-export async function getStaticProps({locale}){
-  return{
-    props:{
-      ...(await serverSideTranslations(locale, ['common']))
-    }
-  }
-}  
 
 export default EmailForm;

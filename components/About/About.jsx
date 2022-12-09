@@ -1,13 +1,12 @@
 import photo from '../../public/assets/Foto.png'
 import logo from '../../public/assets/about-logo.png'
 import { useTranslation } from 'next-i18next'
-
 const About = () => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation('home')
   return (
     <div className='app_about' >
       <div className='app_about-content'>
-            <p className='app_about-title'>{t("home-about-title")}asdasdasd</p>
+            <p className='app_about-title'>{t("home-about-title")}</p>
             <img src={logo.src} alt="about-logo" className='app_about-logo'/>
             <p className='app_about-text'>{t("home-about-txt")}</p>
       </div>

@@ -2,16 +2,17 @@ import React,{useEffect} from 'react'
 import { useRouter } from 'next/router';
 import { Footer, RecentPosts, PostDetail } from '../../components'
 import { getPosts, getPostDetails } from '../../services/service'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const PostNewsScreen = ({posts, post}) => {
   const router = useRouter()
+  console.log(post)
   if(router.isFallback){
-    return <Loader/>
+    return <></>
   }
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-  
     return(
     <>
       <div className='app_postdetail-container-master'>
@@ -23,19 +24,22 @@ const PostNewsScreen = ({posts, post}) => {
     </>
   )
 };
-export async function  getStaticProps({ params }){
+export async function  getStaticProps({ params, locale }){
   const data = await getPostDetails(params.slug)
   const posts  = await getPosts()
-  console.log(data)
+  console.log(posts)
   return {
-    props: { post: data , posts},
+    props: { post: data, posts,
+      ...(await serverSideTranslations(locale, ['home']))
+    },
   }
 }
+
 export async function  getStaticPaths(){
-      const posts  = await getPosts()
-      return {
-        paths: posts.map(({node: {slug}}) => ({params: {slug}})),
-        fallback: true,
-      }
+  const posts  = await getPosts()
+  return {
+    paths: posts.map(({node: {slug}}) => ({params: {slug}})),
+    fallback: true,
+  }
 }
 export default PostNewsScreen

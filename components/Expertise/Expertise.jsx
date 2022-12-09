@@ -5,10 +5,10 @@ import { IoMdCopy} from 'react-icons/io'
 import { VscPieChart} from 'react-icons/vsc'
 import { HiOutlineBriefcase } from 'react-icons/hi'
 import { AiOutlineIdcard } from 'react-icons/ai'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
 const Expertise = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("home");
   const expertisesPT = [
       { 
             icon : <AiOutlineIdcard  className="app_expertise-items-icons"/>,

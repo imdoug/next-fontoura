@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import BtnSlider from './BtnSlider'
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im"
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
 
 export default function Slider({reviews}) {
-    const {i18n} = useTranslation("common");
+    const {i18n} = useTranslation("home");
     const [slideIndex, setSlideIndex] = useState(1)
     const nextSlide = () => {
         if(slideIndex !== reviews.length){

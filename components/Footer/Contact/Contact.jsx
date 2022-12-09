@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 
 
 const Contact = () => {
-  const {t} = useTranslation('common');
+  const {t} = useTranslation('home');
   return (
     <>
     <div className="app_contact-container">
@@ -48,12 +48,5 @@ const Contact = () => {
     </>
   )
 }
-export async function getStaticProps({locale}){
-  return{
-    props:{
-      ...(await serverSideTranslations(locale, ['common']))
-    }
-  }
-}  
 
 export default Contact

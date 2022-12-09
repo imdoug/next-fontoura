@@ -1,13 +1,11 @@
 import React,{ useEffect } from 'react'
 import { Footer } from '../components'
 import photo from '../public/assets/Foto.png'
-import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/dist/commonjs/serverSideTranslations'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export default function about() {
-      const { locale, locales, push } = useRouter()
-      const {t} = useTranslation('common');
+  const {t} = useTranslation('home');
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -16,7 +14,7 @@ export default function about() {
     <div className="app_aboutScreen_container">
       <div className="app_aboutScreen">
         <div className="app_aboutScreen_content">
-              <p className="app_aboutScreen_title">{locale}</p>
+              <p className="app_aboutScreen_title">{t("about-me")}</p>
               <h2 >Kelly Fontoura<span>.</span></h2>
 
               <p className="app_aboutScreen_description">{t("aboutScreen-text1")}<br></br><br></br>
@@ -51,7 +49,7 @@ export default function about() {
 export async function getStaticProps({locale}){
   return{
     props:{
-      ...(await serverSideTranslations(locale, ['common']))
+      ...(await serverSideTranslations(locale, ['home']))
     }
   }
 }

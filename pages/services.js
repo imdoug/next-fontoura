@@ -7,11 +7,11 @@ import { VscPieChart} from 'react-icons/vsc'
 import { HiOutlineBriefcase } from 'react-icons/hi'
 import { AiOutlineIdcard } from 'react-icons/ai'
 import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/dist/commonjs/serverSideTranslations'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export default function services() {
       const [expertise, setExpertise] = useState('')
-      const { t } = useTranslation("common");
+      const { t } = useTranslation('home')
       const expertisesPT = [
         { 
               icon : <AiOutlineIdcard  className="app_expertise-items-icons"/>,
@@ -167,7 +167,7 @@ export default function services() {
     export async function getStaticProps({locale}){
       return{
         props:{
-          ...(await serverSideTranslations(locale, ['common']))
+          ...(await serverSideTranslations(locale, ['home']))
         }
       }
     }    

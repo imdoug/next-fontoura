@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react"
 import { Footer, CustomPost, NewsCarousel } from "../components"
 import { getPosts, getReviews } from '../services/service'
-
 import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/dist/commonjs/serverSideTranslations'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Link from "next/link"
+import { useRouter } from "next/router"
 
 const NewsScreen = ({posts}) => {
-  const {t, i18n} = useTranslation();
+  const { locale } = useRouter()
+  const {t, i18n} = useTranslation("home");
   const [query, setQuery] = useState("")
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -19,12 +21,12 @@ const NewsScreen = ({posts}) => {
         <div className="app_newsScreen-input-container">
           <input className="app_newsScreen-searchBar" type="search" style={query !==  "" ? {borderBottomLeftRadius: "0px",borderBottomRightRadius: "0px"} : {}} name="posts search" placeholder="Search..." onChange={e=>{setQuery(e.currentTarget.value)}}/>
           <div className="app_newsScreen-input-result">
-                  {posts.map((value,key)=>{
+                  {posts.map((post,key)=>{
                     if(query === "") return <></>
-                    if(i18n.language === 'en' && value.node.title.toLowerCase().includes(query.toLowerCase())){
-                      return <a to={`/News/${value.node.id}`} ><div className="app_postdetail-input-result-option" key={key}>{value.node.title}</div></a>
-                    }else if (i18n.language !== 'en' && value.node.localizations[0].title.toLowerCase().includes(query.toLowerCase())){
-                      return <a to={`/News/${value.node.id}`} ><div className="app_postdetail-input-result-option" key={key}>{i18n.language === 'en' ? value.node.title : value.node.localizations[0].title}</div></a>
+                    if(i18n.language === 'en' && post.node.title.toLowerCase().includes(query.toLowerCase())){
+                      return <Link href={`/news/${post.node.slug}`} locale={locale} ><div className="app_postdetail-input-result-option" key={key}>{post.node.title}</div></Link>
+                    }else if (i18n.language !== 'en' && post.node.localizations[0].title.toLowerCase().includes(query.toLowerCase())){
+                      return <Link hred={`/news/${post.node.slug}`} locale={locale} ><div className="app_postdetail-input-result-option" key={key}>{i18n.language === 'en' ? post.node.title : post.node.localizations[0].title}</div></Link>
                     }
                })}
           </div>
@@ -52,7 +54,7 @@ export async function getStaticProps({locale}){
         props:{
           posts,
           reviews,
-          ...(await serverSideTranslations(locale, ['common']))
+          ...(await serverSideTranslations(locale, ['home']))
         }
       }
     }

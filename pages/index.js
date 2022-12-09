@@ -2,15 +2,9 @@ import { useEffect } from 'react'
 import { About,EB3, Expertise, Guide, Instagram, News, Footer } from '../components'
 import BlueTop from '../components/CustomTops/BlueTop'
 import { getPosts, getReviews } from '../services/service'
-
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/dist/commonjs/serverSideTranslations'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export default function Home({posts, reviews}) {
-  const { t } = useTranslation('common')
-  console.log('Posts:',posts)
-  console.log('Revies:',reviews)
-  const data = [1]
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -19,7 +13,7 @@ export default function Home({posts, reviews}) {
       <About /> 
       <EB3 />
       <Expertise />
-      <Guide />
+      <Guide posts={posts}/>
       <News posts={posts} reviews={reviews}/>
       <Instagram />
 
@@ -35,7 +29,7 @@ export async function getStaticProps({locale}){
     props:{
       posts,
       reviews,
-      ...(await serverSideTranslations(locale, ['common']))
+      ...(await serverSideTranslations(locale, ['home']))
     }
   }
 }

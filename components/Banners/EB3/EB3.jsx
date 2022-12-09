@@ -1,9 +1,8 @@
 import eb3  from '../../../public/assets/eb3.png'
-import { useTranslation } from 'react-i18next'
-
+import { useTranslation } from 'next-i18next'
 
 const EB3 = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('home');
   return (
     <div className='app_banner_eb3-container  section_padding'>
         <div className='app_banner_eb3-content'>

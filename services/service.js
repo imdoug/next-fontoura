@@ -51,7 +51,6 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
       }
     `;
     const result = await request(graphqlAPI, query);
-    console.log(result.postsConnection.edges)
     return result.postsConnection.edges;
   }
   export const getReviews = async () =>{

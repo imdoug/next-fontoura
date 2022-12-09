@@ -3,9 +3,12 @@ import React from 'react'
 import moment from 'moment';
 import { RiArrowLeftSLine } from 'react-icons/ri'
 import { useTranslation } from 'next-i18next'
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const PostDetail = ({post}) => {
-      const {t, i18n} = useTranslation();
+  const { locale } = useRouter()
+      const {t, i18n} = useTranslation("home");
       const getContentFragment = (index, text, obj, type) => {
             let modifiedText = text;
         
@@ -48,11 +51,11 @@ const PostDetail = ({post}) => {
           return (<>
             <div className='app_postdetail-container'>
               <p className='app_postdetail-container-back'>
-                <a href='/News' className='app_postdetail-container-back' ><RiArrowLeftSLine />{t("all-news")}</a>
+                <Link href='/news' className='app_postdetail-container-back' ><RiArrowLeftSLine />{t("all-news")}</Link>
               </p>
                 <div className='app_postdetail-container-headline'>
-                  <h1 className="app_postdetail-title">{post.title}</h1>
-                  <p className="app_postdetail-date">{post.categories[0].name} - {moment(post.createdAt).format('L')}</p>
+                  <h1 className="app_postdetail-title">{i18n.language === 'en' ? post.title : post.localizations[0].title}</h1>
+                  <p className="app_postdetail-date">{i18n.language === 'en' ? post.categories[0].name : post.categories[0].localizations[0].name} - {moment(post.createdAt).format('L')}</p>
                   <img
                       className="app_postdetail-cover"
                       src={post.featuredImage.url}
@@ -60,13 +63,6 @@ const PostDetail = ({post}) => {
                     />
                 </div>
                 <div className='app_postdetail-container-content'>
-                      {post.content.raw.children.map((typeObj, index)=>{
-                        const children = typeObj.children.map((item, itemIndex)=> getContentFragment(itemIndex, item.text))
-                
-                        return getContentFragment(index, children, typeObj, typeObj.type)
-                      })}
-                </div>
-                {/* <div className='app_postdetail-container-content'>
                   {i18n.language === 'en' 
                   ? <>
                       {post.content.raw.children.map((typeObj, index)=>{
@@ -82,7 +78,7 @@ const PostDetail = ({post}) => {
                         return getContentFragment(index, children, typeObj, typeObj.type)
                       })}
                     </>}
-                </div> */}
+                </div> 
                 <p className='app-postdetail-post-content-text' style={{marginTop: 40, textAlign: 'start', cursor: 'pointer'}}>{t("source")} <a href={post.source} style={{textTransform: 'none', color: '#768899'}} target="_blank" rel="noopener noreferrer">{post.from}</a></p>
             </div>
           </>)

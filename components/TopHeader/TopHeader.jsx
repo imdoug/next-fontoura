@@ -5,9 +5,9 @@ import usaFlag from '../../public/assets/usa-flag.png'
 import { useRouter } from 'next/router'
 
 const TopHeader = () => {
-  const { locale, locales, push } = useRouter()
+  const { pathname, asPath , locales, push, query } = useRouter()
   const switchLenguage = (l)=>{
-    push('/', undefined, {locale: l}) 
+    push({ pathname, query }, asPath, { locale: l }) 
   }
   return (
     <>
@@ -22,11 +22,11 @@ const TopHeader = () => {
               { locales.map((l)=>{
                 if(l === 'en'){
                   return (
-                    <div className='language-icons' style={{width: 22, height :22, backgroundImage: `url(${usaFlag.src})`, backgroundSize: 'cover' }} value={"pt"} onClick={()=>{switchLenguage(l)}}></div>
+                    <div className='language-icons' style={{width: 22, height :22, backgroundImage: `url(${usaFlag.src})`, backgroundSize: 'cover' }} value={"pt"} onClick={()=>{switchLenguage('en')}}></div>
                   )
                 }else{
                   return(
-                    <div className='language-icons' style={{width: 22, height :22, backgroundImage: `url(${brazilFlag.src})`, backgroundSize: 'cover' }} value={"pt"} onClick={(l)=>{switchLenguage(l)}}></div>
+                    <div className='language-icons' style={{width: 22, height :22, backgroundImage: `url(${brazilFlag.src})`, backgroundSize: 'cover' }} value={"pt"} onClick={()=>{switchLenguage('pt')}}></div>
                   )
                 }
               })}
