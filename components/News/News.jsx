@@ -20,6 +20,27 @@ const News = ({posts, reviews}) => {
                   </div>
                   <div className='app_news-posts-container'>
                         <div className='app_news-posts' >
+                              <img src={posts[0].node.featuredImage.url} alt="post-cover" srcset="" className="app_news-posts-img"/>
+                              
+                              <div className='app_news-posts-content'>
+                                    <p className='app_news-posts-content-subTitle'>{posts[0].node.title}</p>
+                                    <p className='app_news-posts-content-title'>{posts[0].node.categories[0].name} - {moment(posts[0].createdAt).format("L")}</p>
+                                    <p className='app_news-posts-content-text'>{posts[0].node.shortDescription}</p>
+                                    <a to={'/'} className='app_news-posts-content-link'>{t("read-more")} </a>
+                              </div>
+                        </div>
+                        <div className='app_news-posts'>
+                              <img src={posts[1].node.featuredImage.url}alt="post-cover" srcset="" className='app_news-posts-img'/>
+                              <div  className='app_news-posts-content'>
+                                    <p className='app_news-posts-content-subTitle'>{posts[1].node.title}</p>
+                                    <p className='app_news-posts-content-title'>{posts[1].node.categories[0].name} - {moment(posts[1].createdAt).format("L")}</p>
+                                    <p className='app_news-posts-content-text'>{posts[1].node.shortDescription}</p>     
+                                    <a to={'/'} className='app_news-posts-content-link'>{t("read-more")}</a>
+                              </div>
+                        </div>
+                  </div>
+                  {/* <div className='app_news-posts-container'>
+                        <div className='app_news-posts' >
                               <img src={"posts[0].node.featuredImage.url"} alt="post-cover" srcset="" style={{backgroundImage: `url()`}} className="app_news-posts-img"/>
                               
                               <div className='app_news-posts-content'>
@@ -38,7 +59,7 @@ const News = ({posts, reviews}) => {
                                     <a to={'/'} className='app_news-posts-content-link'>{t("read-more")}</a>
                               </div>
                         </div>
-                  </div>
+                  </div> */}
             </div> 
             <Slider reviews={reviews} />
             <img className='app_news-statue' src={liberty.src} alt="statue of liberty"  />

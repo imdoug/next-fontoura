@@ -26,7 +26,7 @@ export default function Slider({reviews}) {
     }
     return (
         <div className="container-slider">
-            {/* {reviews.map((obj, index) => {
+            {reviews.map((obj, index) => {
                 return (
                   <div
                   key={obj.id}
@@ -44,7 +44,7 @@ export default function Slider({reviews}) {
                   </div>
                   </div>
                 )
-            })} */}
+            })}
             <BtnSlider moveSlide={nextSlide} direction={"next"} />
             <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
         </div>
