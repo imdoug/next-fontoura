@@ -17,20 +17,20 @@ const RecentPosts = ({posts, slug}) => {
                   {posts.map((value,key)=>{
                     if(query === "") return <></>
                     if(i18n.language === 'en' && value.node.title.toLowerCase().includes(query.toLowerCase())){
-                      return <Link to={`/news/${value.node.slug}`} ><div className="app_postdetail-input-result-option" key={key}>{value.node.title}</div></Link>
+                      return <Link to={`/news/${value.node.slug}`} key={key} ><div className="app_postdetail-input-result-option" key={key}>{value.node.title}</div></Link>
                     }else if (i18n.language !== 'en' && value.node.localizations[0].title.toLowerCase().includes(query.toLowerCase())){
-                      return <Link to={`/news/${value.node.slug}`} ><div className="app_postdetail-input-result-option" key={key}>{i18n.language === 'en' ? value.node.title : value.node.localizations[0].title}</div></Link>
+                      return <Link to={`/news/${value.node.slug}`} key={key} ><div className="app_postdetail-input-result-option" key={key}>{i18n.language === 'en' ? value.node.title : value.node.localizations[0].title}</div></Link>
                     }
                })}
               </div>
               </div>
               <p className='app_postdetail-side-nav-recentPosts-title'>{t("recent-news")}</p>
-              {posts.map((post)=>(
+              {posts.map((post, i)=>(
                 <>
                 { post.node.slug === slug 
                 ? <></> 
                 : 
-                <Link href={`/news/${post.node.slug}`} locale={locale} >
+                <Link href={`/news/${post.node.slug}`} locale={locale} key={i} >
                   <div className='app_postdetail-side-nav-recentPosts'>
                         <div className='app_postdetail-side-nav-recentPosts-post'>
                             <img src={post.node.featuredImage.url} alt=""  className='app_postdetail-side-nav-recentPosts-post-img'/>

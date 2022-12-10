@@ -9,7 +9,7 @@ import { AiOutlineIdcard } from 'react-icons/ai'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-export default function services() {
+export default function Services() {
       const [expertise, setExpertise] = useState('')
       const { t } = useTranslation('home')
       const expertisesPT = [

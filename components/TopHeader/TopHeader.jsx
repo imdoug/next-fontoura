@@ -19,14 +19,14 @@ const TopHeader = () => {
             <p className='app_topHeader-text'>info@fonntoura.us</p>
           </div>
             <div style={{display: 'flex', flexDirection: 'row', gap: 10, alignItems:'center'}}>
-              { locales.map((l)=>{
+              { locales.map((l, i)=>{
                 if(l === 'en'){
                   return (
-                    <div className='language-icons' style={{width: 22, height :22, backgroundImage: `url(${usaFlag.src})`, backgroundSize: 'cover' }} value={"pt"} onClick={()=>{switchLenguage('en')}}></div>
+                    <div className='language-icons' key={i} style={{width: 22, height :22, backgroundImage: `url(${usaFlag.src})`, backgroundSize: 'cover' }} value={"pt"} onClick={()=>{switchLenguage('en')}}></div>
                   )
                 }else{
                   return(
-                    <div className='language-icons' style={{width: 22, height :22, backgroundImage: `url(${brazilFlag.src})`, backgroundSize: 'cover' }} value={"pt"} onClick={()=>{switchLenguage('pt')}}></div>
+                    <div className='language-icons' key={i} style={{width: 22, height :22, backgroundImage: `url(${brazilFlag.src})`, backgroundSize: 'cover' }} value={"pt"} onClick={()=>{switchLenguage('pt')}}></div>
                   )
                 }
               })}

@@ -5,14 +5,14 @@ import { getPosts, getPostDetails } from '../../services/service'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const PostNewsScreen = ({posts, post}) => {
-  const router = useRouter()
-  console.log(post)
-  if(router.isFallback){
-    return <></>
-  }
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  const router = useRouter()
+  if(router.isFallback){
+    return <></>
+  }
     return(
     <>
       <div className='app_postdetail-container-master'>

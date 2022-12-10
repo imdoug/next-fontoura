@@ -21,9 +21,9 @@ const NewsCarousel = ({posts}) => {
           <>
           <div className="app_news_carousel-container">
             <div id="slider"  className="app_news_carousel-container-slider">
-              {posts.map((post)=>{
+              {posts.map((post, i)=>{
                 return(
-                  <div className="slide-card">
+                  <div className="slide-card" key={i}>
                     <img className="app_news_carousel-slide-card-img"src={post.node.featuredImage.url} alt="news cover" />
                     <Link href={`/news/${post.node.slug}`} locale={locale}>
                       <p className="app_news_carousel-slide-card-text">

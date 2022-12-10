@@ -24,9 +24,9 @@ const NewsScreen = ({posts}) => {
                   {posts.map((post,key)=>{
                     if(query === "") return <></>
                     if(i18n.language === 'en' && post.node.title.toLowerCase().includes(query.toLowerCase())){
-                      return <Link href={`/news/${post.node.slug}`} locale={locale} ><div className="app_postdetail-input-result-option" key={key}>{post.node.title}</div></Link>
+                      return <Link href={`/news/${post.node.slug}`} locale={locale} key={key} ><div className="app_postdetail-input-result-option" key={key}>{post.node.title}</div></Link>
                     }else if (i18n.language !== 'en' && post.node.localizations[0].title.toLowerCase().includes(query.toLowerCase())){
-                      return <Link hred={`/news/${post.node.slug}`} locale={locale} ><div className="app_postdetail-input-result-option" key={key}>{i18n.language === 'en' ? post.node.title : post.node.localizations[0].title}</div></Link>
+                      return <Link hred={`/news/${post.node.slug}`} locale={locale} key={key}  ><div className="app_postdetail-input-result-option" key={key}>{i18n.language === 'en' ? post.node.title : post.node.localizations[0].title}</div></Link>
                     }
                })}
           </div>
