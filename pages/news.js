@@ -5,6 +5,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { motion } from "framer-motion"
 
 const NewsScreen = ({posts}) => {
   const { locale } = useRouter()
@@ -14,7 +15,7 @@ const NewsScreen = ({posts}) => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <>
+    <motion.div exit={{opacity:0}} animate={{opacity:1}} initial={{opacity:0}} style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center'}} >
     <div style={{marginBottom: 40}}></div>
     <div className="app_newsScreen-container">
       <div className="app_newsScreen-page-title" style={{display: 'flex'}}>
@@ -48,7 +49,7 @@ const NewsScreen = ({posts}) => {
       <div style={{marginBottom: 60}}></div>
   </div>
     <Footer/> 
-    </>
+    </motion.div>
   )
 }
 

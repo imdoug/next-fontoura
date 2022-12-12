@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { Footer, RecentPosts, PostDetail } from '../../components'
 import { getPosts, getPostDetails } from '../../services/service'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { motion } from 'framer-motion';
 
 export default function PostNewsScreen ({posts, post}){
   useEffect(() => {
@@ -13,16 +14,16 @@ export default function PostNewsScreen ({posts, post}){
     return <></>
   }
     return(
-    <>
-    <div style={{marginBottom: 40}}></div>
-      <div className='app_postdetail-container-master'>
-          <PostDetail  post={post}  />
-          <div className='white-line'></div>
-          <RecentPosts posts={posts} slug={post.slug}/>
-        </div>  
-        <div style={{marginBottom: 60}}></div>
-          <Footer /> 
-    </>
+      <motion.div exit={{opacity:0}} animate={{opacity:1}} initial={{opacity:0}} style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center'}} >
+        <div style={{marginBottom: 40}}></div>
+          <div className='app_postdetail-container-master'>
+              <PostDetail  post={post}  />
+              <div className='white-line'></div>
+              <RecentPosts posts={posts} slug={post.slug}/>
+            </div>  
+            <div style={{marginBottom: 60}}></div>
+              <Footer /> 
+      </motion.div>
   )
 };
 export async function  getStaticProps({params, locale}){

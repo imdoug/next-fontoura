@@ -8,6 +8,7 @@ import { HiOutlineBriefcase } from 'react-icons/hi'
 import { AiOutlineIdcard } from 'react-icons/ai'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { motion } from 'framer-motion'
 
 export default function Services() {
       const [expertise, setExpertise] = useState('')
@@ -66,7 +67,7 @@ export default function Services() {
         window.scrollTo(0, 0)
       }, [])
       return (
-        <>
+        <motion.div exit={{opacity:0}} animate={{opacity:1}} initial={{opacity:0}} style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center'}} >
           <div style={{width: '100%'}}>
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%'}}>
             <div className="app_expertise-main-container  section_padding">
@@ -161,7 +162,7 @@ export default function Services() {
             </div>          
           </div>
           <Footer/> 
-        </>
+        </motion.div>
     
       )
     }
