@@ -5,6 +5,7 @@ import logo from '../public/assets/about-logo.png'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Slider from '../components/Carousel/Slider'
+import { motion } from 'framer-motion'
 
 export default function About() {
   const {t} = useTranslation('home');
@@ -13,7 +14,7 @@ export default function About() {
   }, [])
   return (
     <>
-    <div className="app_aboutScreen-container">
+    <motion.div exit={{opacity:0}} animate={{opacity:1}} initial={{opacity:0}} className="app_aboutScreen-container">
       <div className="app_aboutScreen">
         <div className="app_aboutScreen-image">
             <img src={about_me.src}  alt="Kelly Fountora" />
@@ -49,7 +50,7 @@ export default function About() {
         <div style={{marginBottom: 20}}></div>
         <Expertise />
         <div style={{marginBottom: 120}}></div>
-    </div>
+    </motion.div>
     <Footer/> 
     </>
   )

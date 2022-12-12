@@ -3,23 +3,23 @@ import { About,EB3, Expertise, Guide, Instagram, News, Footer } from '../compone
 import BlueTop from '../components/CustomTops/BlueTop'
 import { getPosts, getReviews } from '../services/service'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { motion } from 'framer-motion'
 
 export default function Home({posts, reviews}) {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <>
+    <motion.div exit={{opacity:0}} animate={{opacity:1}} initial={{opacity:0}} >
       <About /> 
       <EB3 />
       <Expertise />
       <Guide posts={posts}/>
       <News posts={posts} reviews={reviews}/>
       <Instagram />
-
       <BlueTop />
       <Footer/> 
-    </>
+    </motion.div>
   )
 }
 export async function getStaticProps({locale}){
