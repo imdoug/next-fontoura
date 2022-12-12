@@ -2,9 +2,11 @@ import React,{useEffect} from 'react'
 import { useRouter } from 'next/router';
 import { Footer, RecentPosts, PostDetail } from '../../components'
 import { getPosts, getPostDetails } from '../../services/service'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const PostNewsScreen = ({posts, post}) => {
+  const {t} = useTranslation('home');
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
