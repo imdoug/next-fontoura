@@ -8,7 +8,7 @@ import { useRouter } from 'next/router'
 
 const NavBar = () => {
   const [toggleMenu,setToggleMenu] = useState(false);
-  const {locale} = useRouter()
+  const {locale, asPath} = useRouter()
   const {t} = useTranslation('home');
   return (
     <div className='container'>
@@ -19,7 +19,7 @@ const NavBar = () => {
             <Link href={'/about'} locale={locale}>{t("about-me")}</Link>
             <Link href={'/services'} locale={locale}>{t("services")}</Link>
             <Link href={'/news'} locale={locale}>{t("news")}</Link>
-            <Link href='#contact' >{t("contact")}</Link>
+            <Link href={`${asPath}#contact`} >{t("contact")}</Link>
       </nav>
       <div className='app__navbar-smallscreen'>
         <GiHamburgerMenu fontSize={27} style={{color: 'var(--color-blue)'}} onClick={()=>{setToggleMenu(true)}} />
@@ -37,7 +37,7 @@ const NavBar = () => {
               <Link href='/news' locale={locale} className="app__navbar-smallscreen_link"  onClick={() => setToggleMenu(false)}>{t("news")}</Link>
               </li>
               <li className='p__opensans'>
-              <a href='#contact' className="app__navbar-smallscreen_link"  onClick={() => setToggleMenu(false)}>{t("contact")}</a>
+              <Link href={`${asPath}#contact`} className="app__navbar-smallscreen_link"  onClick={() => setToggleMenu(false)}>{t("contact")}</Link>
               </li>
             </ul>
           </div>
