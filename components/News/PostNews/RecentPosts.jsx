@@ -30,7 +30,7 @@ const RecentPosts = ({posts, slug}) => {
                 { post.node.slug === slug 
                 ? <></> 
                 : 
-                <Link href={`/news/${post.node.slug}`} locale={locale} key={i} >
+                <Link href={`/news/${post.node.slug}`} locale={locale} key={`post${i}`} >
                   <div className='app_postdetail-side-nav-recentPosts'>
                         <div className='app_postdetail-side-nav-recentPosts-post'>
                             <img src={post.node.featuredImage.url} alt=""  className='app_postdetail-side-nav-recentPosts-post-img'/>
