@@ -10,12 +10,12 @@ const NewsCarousel = ({posts}) => {
   const { i18n } = useTranslation("home");
       const slideLeft = () =>{
             var slider = document.getElementById("slider")
-            slider.scrollLeft = slider.scrollLeft + 330;
+            slider.scrollLeft = slider.scrollLeft + 380;
       
         }
         const slideRight = () =>{
           var slider = document.getElementById("slider")
-          slider.scrollLeft = slider.scrollLeft - 330;
+          slider.scrollLeft = slider.scrollLeft - 380;
         }
         return (
           <>

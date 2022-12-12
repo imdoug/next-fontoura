@@ -32,7 +32,7 @@ const News = ({posts, reviews}) => {
                                     <Link href={`/news/${posts[0].node.slug}`} className='app_news-posts-content-link'>{t("read-more")} </Link>
                               </div>
                         </div>
-                        <div className='app_news-posts'>
+                        <div className='app_news-posts second'>
                               <img src={posts[1].node.featuredImage.url}alt="post-cover" srcset="" className='app_news-posts-img'/>
                               <div  className='app_news-posts-content'>
                                     <p className='app_news-posts-content-subTitle'>{i18n.language === 'en' ? posts[1].node.title : posts[1].node.localizations[0].title}</p>

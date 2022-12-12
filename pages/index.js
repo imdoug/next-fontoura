@@ -10,7 +10,7 @@ export default function Home({posts, reviews}) {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <motion.div exit={{opacity:0}} animate={{opacity:1}} initial={{opacity:0}} >
+    <motion.div exit={{opacity:0}} animate={{opacity:1}} initial={{opacity:0}} style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center'}} >
       <About /> 
       <EB3 />
       <Expertise />

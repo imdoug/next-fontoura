@@ -49,7 +49,7 @@ export default function About() {
     </div>
         <div style={{marginBottom: 20}}></div>
         <Expertise />
-        <div style={{marginBottom: 120}}></div>
+        <div className='bottom' style={{marginBottom: 120}}></div>
     </motion.div>
     <Footer/> 
     </>

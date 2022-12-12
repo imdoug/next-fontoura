@@ -129,6 +129,9 @@ a{
       .app_contact-container-top{
             display: none;
       }
+      .app_section-title-page{
+        font-size: 35px;
+      }
 }
 /* ABOUT  */
 .app_about{
@@ -182,6 +185,7 @@ a{
         width: 70%;
         font-size: 13px;
         line-height: 17px;
+        margin-top: 30px;
   }.app_about-content{
         display: flex;
         flex-direction: column;
@@ -328,7 +332,8 @@ a{
         width: 100%;
         display: flex;
         justify-content: center;
-        min-width: 350px;  
+        min-width: 350px; 
+        margin-bottom: 30px;
   }
   .app_aboutScreen-image img{
         max-width: 70%;
@@ -436,6 +441,7 @@ span.blue{
   }
   .app_banner_eb3-content{
         width: 80%;
+        min-height: unset;
   }
   .app_banner_eb3-image{
         margin-top: 30px;
@@ -611,6 +617,7 @@ span.blue{
   }
   .app_banner_guide-post {
        margin: 10px 0px!important;
+       min-height: unset;
   }
   .app_banner_guide-button-container {
         margin-bottom: 0px;
@@ -626,6 +633,8 @@ span.blue{
         width: 100%;
         border-radius: 0px;
         box-shadow: none;  
+        margin-top: 40px;
+        padding-bottom: 20px;
   }
   .app_banner_guide-content{
         width: 90%;
@@ -642,6 +651,7 @@ span.blue{
         padding: 0px 10px;
         width: 100%;
         height: unset;
+        margin-top: 0px;
   }.app_banner_guide-image-container {
         text-align: start;
         display: flex;
@@ -652,6 +662,10 @@ span.blue{
   .app_banner_guide-image {
         margin: 0 auto;
         max-width: unset;
+    }
+    .app_banner_guide-post-content{
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
   
 }
@@ -715,7 +729,7 @@ span.blue{
 }
 .app_expertise-items-title{
   font-family: 'K2D', sans-serif;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 900;
   color: #2a3894;
   line-height: 30px;
@@ -730,6 +744,7 @@ span.blue{
 @media screen and (max-width: 450px) {
   .app_section-title{
         font-size: 35px;
+        margin-top: 0px;
   }
   .app_expertise-items{
         width: unset;
@@ -739,8 +754,11 @@ span.blue{
         min-height: 184px;;
   }
   .app_expertise-items-title{
-        font-size: 17px;
+        font-size: 23px;
         line-height: 21px;
+  }
+  .app_expertise-main-container{
+    margin-bottom: -40px;
   }
   .app_expertise-items-content{
         text-align: center;
@@ -749,6 +767,7 @@ span.blue{
         width: 70%;
         color: #768899;
   }
+  
   .app_expertise-items-icons{
         font-size: 28px;
   }
@@ -800,13 +819,17 @@ ul{
   text-align: start;
 }
 @media screen and (max-width: 900px) {
-  .app_serviceScreen_eb3-title{
+  .app_serviceScreen-eb3-title{
+    margin-top: 20px;
         text-align: center;
         font-size: 35px;
         font-family: 'K2D', sans-serif;
   }
   .app_serviceScreen_eb3-container p{
         font-size: 14px;
+  }
+  .bottom{
+    margin-bottom: 40px!important;
   }
 }
 /* FOOTER */
@@ -857,6 +880,9 @@ ul{
         line-height: 20px;
         margin-bottom: 5px;
   }
+  .app_footer-text p{
+    margin-bottom: 11px;
+}
   .app_footer_outer-text{
         font-size: 11px;
         line-height: 20px;
@@ -876,7 +902,7 @@ ul{
 }
 .app_contact-title{
   text-align: start;
-  font-size: 4rem;
+  font-size: 48px;
   font-weight: 800;
   margin: 0 0 30px 0;
   font-family: 'K2D', sans-serif;
@@ -944,6 +970,7 @@ ul{
 @media screen and (max-width: 900px) {
   .app_contact-container{
         flex-direction: column;
+        padding-top: 30px;
   }
   .app_contact-section1{
         width: 100%;
@@ -956,7 +983,7 @@ ul{
 
   }
   .app_contact-title{
-        font-size: 3rem;
+        font-size: 35px;
   }.app_contact-items{
         margin-top: 40px;
         width: 100%;
@@ -1237,14 +1264,16 @@ textarea{
 }
 @media screen and (max-width: 500px){
   .prev {
-    top: 15%;
+    position: absolute;
+    bottom: 0%;
     left: 20px;
-    transform: translateY(-60%);
+    transform: translateY(450%);
   }
   .next {
-    top: 15%;
+    position: absolute;
+    bottom: 0%;
     right: 20px;
-    transform: translateY(-60%);
+    transform: translateY(450%);
   }
 }
 
@@ -1363,18 +1392,25 @@ textarea{
   }
   .app_instagram-posts-container{
         flex-direction: row;
+        margin-bottom: 40px;
   }
   .app_instagram-post{
         max-width: 330px;
   }
   .app_instagram-title{
-        margin-top: 20px;
+        margin-top: 30px;
         font-size: 35px;
         line-height: 124%;
   }
   .app_instagram-ig{
         font-size: 13px;
         line-height: 21px;
+  }
+  .app_instagram-container{
+    margin-bottom: 0px;
+  }
+  .app_instagram-container p{
+    margin-bottom: 10px;
   }
   
 }
@@ -1509,7 +1545,7 @@ textarea{
   font-size: 55px;
   color: var(--color-blue);
   font-family: 'K2D', sans-serif;
-  font-weight: 800;
+  font-weight: 900;
 }
 .app_news-title-button-container {
   display: flex;
@@ -1618,7 +1654,8 @@ textarea{
         width: 100%;
         font-size: 35px;
         line-height: 124%;
-        margin-bottom: 150px;
+        margin-bottom: 110px;
+        margin-top: 10px;
   }
   .app_news-title-button{
         display: flex;
@@ -1637,7 +1674,7 @@ textarea{
         align-items: center;
         width: 100%;
         max-width: unset; 
-        margin-top: 250px;
+        margin-top: 200px;
   }
   .app_news-posts-content{
         text-align: left;
@@ -1670,10 +1707,15 @@ textarea{
         line-height: 21px;
   }
   .app_news-posts-content-subTitle{
-        font-weight: 700;
-        font-size: 18px;
+        font-weight: 900;
+        font-size: 22px;
         line-height: 21px;
-        color: #768899;
+  }
+  .app_news-title-text{
+    font-size: 35px;
+  }
+  .second{
+    margin-top: 180px;
   }
 
 }
@@ -1736,7 +1778,7 @@ textarea{
 .app_newsScreen-page-title-text{ 
   text-align: start;
   letter-spacing: 2px;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 55px;
   line-height: 121%;
   margin-top: 0;
@@ -2011,25 +2053,28 @@ textarea{
         line-height: 150%;
         color: #768899;
   }
+  .container-slider{
+    margin-top: 150px;
+  }
   .app_newsScreen-page-title{
         font-size: 35px;
         line-height: 111%;
   }
   .app_newsScreen-post-title{
-        font-size: 18px;
+        font-size: 23px;
         line-height: 23px;
   }
   .app_newsScreen-post-subtitle{
         margin-top: 0px;
-        font-size: 13px;
+        font-size: 15px;
         line-height: 21px;
   }
   .app_newsScreen-post-text{
-        font-size: 14px;
+        font-size: 16px;
         line-height: 18px;
   }
   .app_newsScreen-post-link{
-        font-size: 13px;
+        font-size: 15px;
         line-height: 21px;
   }
   /*  */
@@ -2039,9 +2084,14 @@ textarea{
   }
   .app_newsScreen-container{
         width: 85%;
+        margin-bottom: -20px;
   }
   .slide-card{ /* slider card */
         margin-left: 5px;      
+  }
+  .app_newsScreen-page-title-text{
+    font-size: 35px;
+    margin-left: 0;
   }
 }
 /* POST NEWS - DETAIL */
@@ -2257,12 +2307,17 @@ textarea{
   .app_postdetail-container-master{
         width: 90%;
         flex-direction: column;
+        margin-bottom: -30px;
   }
   .app_postdetail-container{
         width: 100%;
+        margin-bottom: 10px;
   }
   .app_postdetail-side-nav{
         width: 100%;
+  }
+  .app_postdetail-side-nav-recentPosts-title{
+    margin-top: 20px;
   }
   .white-line{
         width: 100%;
