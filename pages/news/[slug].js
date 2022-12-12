@@ -16,9 +16,9 @@ export default function PostNewsScreen ({posts, post}){
     <>
     <div style={{marginBottom: 40}}></div>
       <div className='app_postdetail-container-master'>
-          {/* <PostDetail  post={post}  />
+          <PostDetail  post={post}  />
           <div className='white-line'></div>
-          <RecentPosts posts={posts} slug={post.slug}/> */}
+          <RecentPosts posts={posts} slug={post.slug}/>
         </div>  
         <div style={{marginBottom: 60}}></div>
           <Footer /> 
