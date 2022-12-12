@@ -70,7 +70,7 @@ export default function Services() {
           <div style={{width: '100%'}}>
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%'}}>
             <div className="app_expertise-main-container  section_padding">
-                <div className='app_section-title'>
+                <div className='app_section-title-page'>
                       <p>Expertise<span>.</span></p>
                 </div>
                 <div id="title" className="app_expertise-container">
@@ -83,6 +83,7 @@ export default function Services() {
                       ))}
                 </div>
           </div>
+          <div style={{marginBottom: 40}}></div>
             </div>
     
               <div className='app_serviceScreen-eb3-container section_padding'>

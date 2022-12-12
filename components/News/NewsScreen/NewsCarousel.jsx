@@ -26,11 +26,13 @@ const NewsCarousel = ({posts}) => {
                   <div className="slide-card" key={i}>
                     <img className="app_news_carousel-slide-card-img"src={post.node.featuredImage.url} alt="news cover" />
                     <Link href={`/news/${post.node.slug}`} locale={locale}>
-                      <p className="app_news_carousel-slide-card-text">
+                      <div className="app_news_carousel-slide-card-text">
+                        <p style={{margin: '0px 10px', fontSize: 27}}>
                         {i18n.language === 'en' ? post.node.title : post.node.localizations[0].title}
                         <br></br>
                         <span className="app_news_carousel-slide-card-date" >{i18n.language === 'en' ? post.node.categories[0].name : post.node.categories[0].localizations[0].name} - {moment(post.node.createdAt).format("L")}</span>
                       </p>
+                      </div>
                     </Link>
                   </div>
                 )

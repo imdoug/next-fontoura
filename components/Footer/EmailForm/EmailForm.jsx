@@ -62,16 +62,16 @@ const EmailForm = () => {
       <div className="app_emailForm_fields-p3">
         <div className="app_emailForm_fields-p3-icons">
           <a href="http://" target="_blank" rel="noopener noreferrer">
-            <RiFacebookCircleLine size={28} />
+            <RiFacebookCircleLine  />
           </a>
           <a href="http://" target="_blank" rel="noopener noreferrer">
-            <RiInstagramLine size={28} />
+            <RiInstagramLine  />
           </a>
           <a href="http://" target="_blank" rel="noopener noreferrer">
-            <RiTwitterLine size={28} />
+            <RiTwitterLine  />
           </a>
           <a href="http://" target="_blank" rel="noopener noreferrer">
-            <RiLinkedinBoxLine size={28} />
+            <RiLinkedinBoxLine  />
           </a>
         </div>
         <div className="app_emailForm_fields-p3-btn">

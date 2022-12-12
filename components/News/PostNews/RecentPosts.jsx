@@ -17,9 +17,9 @@ const RecentPosts = ({posts, slug}) => {
                   {posts.map((value,key)=>{
                     if(query === "") return <></>
                     if(i18n.language === 'en' && value.node.title.toLowerCase().includes(query.toLowerCase())){
-                      return <Link to={`/news/${value.node.slug}`} key={key} ><div className="app_postdetail-input-result-option" key={key}>{value.node.title}</div></Link>
+                      return <Link href={`/news/${value.node.slug}`} key={key} ><div className="app_postdetail-input-result-option" key={key}>{value.node.title}</div></Link>
                     }else if (i18n.language !== 'en' && value.node.localizations[0].title.toLowerCase().includes(query.toLowerCase())){
-                      return <Link to={`/news/${value.node.slug}`} key={key} ><div className="app_postdetail-input-result-option" key={key}>{i18n.language === 'en' ? value.node.title : value.node.localizations[0].title}</div></Link>
+                      return <Link href={`/news/${value.node.slug}`} key={key} ><div className="app_postdetail-input-result-option" key={key}>{i18n.language === 'en' ? value.node.title : value.node.localizations[0].title}</div></Link>
                     }
                })}
               </div>

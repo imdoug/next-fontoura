@@ -8,7 +8,6 @@ import { useRouter } from 'next/router'
 const Guide = ({posts}) => {
   const { locale } = useRouter()
   const { t, i18n } = useTranslation('home');
-  console.log(posts)
   return (
     <div className='app_banner_guide-container'>
         <div className='app_banner_guide-content'>

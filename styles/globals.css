@@ -49,6 +49,16 @@ a{
       justify-content: center;
       align-items: center;
 }
+.app_section-title-page{
+  font-size: 55px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90%;
+  color: var(--color-blue);
+  font-family: 'K2D', sans-serif;
+  font-weight: 900;
+}
 .app_section-title span{
       color: red;
       font-size: 40px;
@@ -140,7 +150,7 @@ a{
 .app_about-text{
   text-align: left;
   height: 117px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 23px;
   max-width: 343px;
   color: #768899;
@@ -217,6 +227,7 @@ a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 .app_aboutScreen{
   margin-top: 50px;
@@ -228,12 +239,25 @@ a{
 }
 .app_aboutScreen-content{
   align-self: flex-start;
-  max-width: 45%;
+  max-width: 60%;
   color: var(--color-blue);
 }
+.app_aboutScreen-content2{
+  align-self: flex-start;
+  max-width: 80%;
+  margin: 0 auto;
+  color: var(--color-blue);
+  font-size: 15px;
+}
+.app_aboutScreen-content2 p{
+  font-size: 15px;
+}
+.app_aboutScreen-content2 .app_aboutScreen-description{
+  margin: 0;
+}
 .app_aboutScreen-description{
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 15px;
+  line-height: 18px;
   text-align: justify;
 }
 .app_aboutScreen-content h2{
@@ -247,20 +271,26 @@ a{
 }
 .app_aboutScreen-description{
   text-align: left;
+  color: #768899;
+}
+.app_aboutScreen-description span{
+  color: #768899;
 }
 .app_aboutScreen-image{
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .app_aboutScreen-image img{
-  max-width: 90%;
+  max-width: 70%;
+  min-width: 450px;
 }
 .app_aboutScreen-title{
+  margin-top: 10px;
   margin-bottom: -20px;
   text-align: start;
   max-width: 400px;
-  font-size: 35px;
+  font-size: 33px;
   font-family: 'K2D', sans-serif;
 }
 .app_aboutScreen-text{
@@ -274,7 +304,8 @@ a{
   width: 60%;
 }
 .app_aboutScreen-logo{
-  width: 100%;
+  width: 60%;
+  margin: 20px 0;
 }
 .app_aboutScreen-carousel{
   display: flex;
@@ -286,18 +317,19 @@ a{
   z-index: 5;
 }
 /*  */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   .upper-curve-about{
         display: none;
   }
   .app_aboutScreen{
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-top: 0px;
   }
   .app_aboutScreen-image{
         width: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        min-width: 350px;  
   }
   .app_aboutScreen-image img{
         max-width: 70%;
@@ -327,7 +359,7 @@ a{
 /* EB3 */
 .app_banner_eb3-container{
   width: 90%;
-  padding:40px 30px 30px 30px;
+  padding: 50px 30px 50px 30px;
   background-color: #FFF;
   border-radius: 32px;
   max-height: 657px;
@@ -338,20 +370,24 @@ a{
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  background-image: url(../public/assets/destaque.png);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 100% 100%;
 }
 .app_banner_eb3-title{
   text-align: left;
   font-size: 55px;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 121%;
-  width: 485px;
+  width: 100%;
   color: #768899;
-  margin: 30px 0px;
+  margin:  30px 0px 30px 0px;
   font-family: 'K2D', sans-serif;
 }
 .app_banner_eb3-text{
   text-align: left;
-  width: 488px;
+  width: 100%;
   line-height: 23px;
   color: #768899;
   margin: 0px 0px 30px 0px ;
@@ -361,8 +397,8 @@ a{
   display: flex;
   text-align: left;
   flex-direction: column;
-  justify-content: flex-start;
-  width: 488px;
+  justify-content: center;
+  min-height: 572px;
 }
 span.blue{
   color: #2A3894;
@@ -376,7 +412,7 @@ span.blue{
  
 }
 .app_banner_eb3-content{
-  width: 50%;
+  width: 38%;
 }
 @media screen and (max-width: 450px) {
   p.app_banner_eb3-title {
@@ -397,6 +433,7 @@ span.blue{
         box-shadow: none; 
         padding: 0px 0px 30px 0px;
         max-height: unset;
+        background-image: none;
   }
   .app_banner_eb3-content{
         width: 80%;
@@ -422,7 +459,7 @@ span.blue{
 .app_banner_guide-container{
   color: #FFF;
   width: 90%;
-  padding: 30px;
+  padding: 30px 30px 60px 30px;
   background-color: #283B91;
   max-height: 657px;
   max-width: 1337px;      
@@ -432,7 +469,7 @@ span.blue{
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 100px;
 
 }
 .app_banner_guide-container .hr{
@@ -443,10 +480,11 @@ span.blue{
   text-align: start;
   max-width: 589px;
   height: 30px;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 27px;
+  font-weight: 900;
   font-family: 'K2D', sans-serif;
   color: #FFF;
+  text-transform: none;
 }
 .app_banner_guide-content{
   width: 485px;
@@ -467,7 +505,7 @@ span.blue{
 }
 .app_banner_guide-post-content{
   text-align: start;
-  padding-top: 10px;
+  margin-top: 40px;
 }
 .app_banner_guide-image-container{
   text-align: center;
@@ -494,6 +532,7 @@ span.blue{
 .app_banner_guide-post{
   display: flex;
   flex-direction: column;
+  min-height: 525px;
 }
 .app_banner_guide-button{
   align-self: flex-start;
@@ -502,6 +541,8 @@ span.blue{
   border-radius: 30px;
   cursor: pointer;
   color: #283B91;
+  font-size: 14px;
+  font-weight: bold;
 }
 .app_banner_guide-button:hover{
   background-color: rgba(255, 255, 255, 0.5);
@@ -631,10 +672,12 @@ span.blue{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 19px;
+  gap: 20px;
   width: 100%;
+  margin: 0 auto;
+
 }
 
 .app_expertise-items{
@@ -646,7 +689,6 @@ span.blue{
   height: 230px;
   padding: 10px;
   border-radius: 20px;
-  margin-bottom: 19px;
   background-color: #FFF;
   cursor: pointer;
   text-transform: none;
@@ -657,12 +699,13 @@ span.blue{
 .app_section-title{
   width: 591px;
   font-size: 55px;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 121%;
   font-size: 55px;
   text-align: center;
   font-family: 'K2D', sans-serif;
   color: #2a3894;
+  margin-top: 30px;
 }
 .app_section-title p{
   margin-top: 25px;
@@ -674,7 +717,7 @@ span.blue{
 .app_expertise-items-title{
   font-family: 'K2D', sans-serif;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 900;
   color: #2a3894;
   line-height: 30px;
   margin: 0;
@@ -739,12 +782,14 @@ span.blue{
 .app_serviceScreen-eb3-title{
   text-align: center;
   font-size: 55px;
+  font-family: 'K2D', sans-serif;
+  margin-top: 15px;
 }
 .app_serviceScreen-eb3-container p{
   font-size: 18px;
   color: #768899;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 18px;
   text-align: justify;
   margin-bottom: 20px;
   min-height: fit-content;
@@ -785,6 +830,8 @@ ul{
   text-align: center;
   width: 80%;
   font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 .app_footer_outer-container{
   display: flex;
@@ -794,7 +841,7 @@ ul{
 .app_footer_outer-text{
   text-align: center;
   width: 80%;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 20px;
   color: #283B91;
 }
@@ -823,7 +870,7 @@ ul{
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 50px 0px;
+  padding:  50px 0px 70px 0px;
 }
 .app_contact-section1{
   width: 38%;
@@ -832,7 +879,7 @@ ul{
   text-align: start;
   font-size: 4rem;
   font-weight: 800;
-  margin: 0 0 50px 0;
+  margin: 0 0 30px 0;
   font-family: 'K2D', sans-serif;
   line-height: 121%;
 }
@@ -1004,6 +1051,8 @@ textarea{
 }
 .app_emailForm_fields-p3-icons a{
   color:#FFF;
+  font-size: 20px;
+  margin-right: 5px;
 }
 textarea{
   color: #FFF;
@@ -1061,7 +1110,7 @@ textarea{
 }
 /* SLIDER  */
 .container-slider {
-  width: 90%;
+  width: 80%;
   height: 330px;
   position: relative;
   overflow: hidden;
@@ -1166,6 +1215,7 @@ textarea{
   align-items: center;
   cursor: pointer;
   color: var(--color-blue);
+  opacity: 0.5;
 }
 .btn-slide:hover{
   border: 1px solid var(--color-blue);
@@ -1254,7 +1304,8 @@ textarea{
   
 }
 .app_instagram-posts-container{
-  width: 100%;
+  width: 90%;
+  padding: 0px 5%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -1265,11 +1316,11 @@ textarea{
   margin-bottom: -15px;
 }
 .app_instagram-container p{
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .app_instagram-post{
   margin-top: 20px;
-  width: 330px;
+  width: 350px;
   height: 350px;
   z-index: 5;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.11);
@@ -1286,11 +1337,12 @@ textarea{
   margin: 0px;
 }
 .app_instagram-ig{
-  font-size: 20px;
+  font-size: 16px;
   line-height: 30px;
   text-align: center;
   color: #768899;
   text-transform: none;
+  font-weight: 400;
 }
 .app_instagram-post-link{
   width: 100%;
@@ -1436,6 +1488,7 @@ textarea{
   align-items: center;
   overflow: hidden;
   margin-bottom: -200px;
+  margin-top: 30px;
 }
 .app_news-content{
   width: 80%;
@@ -1445,7 +1498,7 @@ textarea{
   align-items: baseline;
 }
 .app_news-title{
-  width: 65%;
+  width: 64%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1471,6 +1524,7 @@ textarea{
   border-radius: 30px;
   cursor: pointer;
   color: #fff;
+  text-transform: none;
 }
 .app_news-title-button:hover{
   background-color: #fff;
@@ -1482,25 +1536,25 @@ textarea{
   width: 65%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 50px ;
+  margin-bottom: 20px ;
 }
 .app_news-posts-content{
   text-align: left;
-  padding: 0px 15px;
+  padding: 0px 15px 0px 0px;
 }
 .app_news-posts{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-width: 370px; 
+  width: 350px; 
   min-height: 264px;
-  padding: 0 10px;
+  padding-right: 15px;
 }
 .app_news-posts-img{
  max-width: 350px; 
- min-height: 264px;
+ height: 218px;
  border-radius: 20px;
 }
 .app_news-statue{
@@ -1512,29 +1566,30 @@ textarea{
   max-width: 600px;
 }
 .app_news-posts-content-title{
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 30px;
+  font-weight: 900;
+  font-size: 15px;
+  margin-top: 8px;
   color: #283B91;
 }
 .app_news-posts-content-subTitle{
-  font-weight: 700;
-  font-size: 23px;
+  font-weight: 900;
+  font-size: 27px;
   line-height: 30px;
-  color: #768899;
+  margin-bottom: 5px;
+  color: #283B91;
   font-family: 'K2D', sans-serif;
 }
 .app_news-posts-content-text{
-  font-size: 15px;
  line-height: 20px;
+ margin: 15px 0px;
   color: #768899;
 }
 .app_news-posts-content-link{
   font-size: 15px;
-  line-height: 30px;
-  font-weight: 700;
+  font-weight: 900;
   color: #283B91;
-  padding: 5px;
+  padding: 5px 5px 5px 0px;
+  text-transform: none;
 }
 .app_news-posts-content-link:hover{
   background-color: #fff;
@@ -1671,11 +1726,13 @@ textarea{
   margin-bottom: 50px;
 }
 .app_newsScreen-page-title{
+  margin: 0 auto;
+  width: 96%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .app_newsScreen-page-title-text{ 
   text-align: start;
@@ -1687,6 +1744,7 @@ textarea{
   margin-bottom: 0;
   color: #2A3894;
   font-family: 'K2D', sans-serif;
+  margin-left: 30px;
 }
 .app_newsScreen-input-container{
   width: 365px;
@@ -1707,6 +1765,7 @@ textarea{
   color: #283B91;
   text-indent: 22px;
   padding-right: 10px;
+  box-shadow: 0px 0px 20px 3px rgb(123 188 255 / 7%);
 }
 .app_newsScreen-searchBar::placeholder{
   font-family: 'K2D', sans-serif;
@@ -1816,18 +1875,18 @@ textarea{
   border-radius: 20px;
 }
 .app_newsScreen-post-title{
-  font-weight: 700;
-  font-size: 23px;
+  font-weight: 900;
+  font-size: 27px;
   line-height: 30px;
   font-family: 'K2D', sans-serif;    
-  color: #768899;
-  height: 30px;
+  color: #283B91;
+  margin-bottom: 8px;
+  
 }
 .app_newsScreen-post-subtitle{
-  margin-top: 30px;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 30px;
+  margin-top: 8px;
+  font-weight: 900;
+  font-size: 15px;
   color: #283B91;
 }
 .app_newsScreen-post-text{
@@ -1837,7 +1896,7 @@ textarea{
 }
 
 .app_newsScreen-post-link{
-  font-weight: 700;
+  font-weight: 900;
   font-size: 15px;
   line-height: 30px;
   text-transform: capitalize;
@@ -1866,14 +1925,13 @@ textarea{
   display: none;
 }
 .slide-card{ /* slider card */
-  width: 320px;
+  width: 350px;
   height: 300px;
   background-color: #FFF;
   border-radius: 10px;
   display: inline-block;
-  margin-left: 50px;
-  margin-right: 5px;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.12);
+  margin-left: 25px;
+  margin-right: 26px;
   border-radius: 20px;
   position: relative;
   
@@ -1886,8 +1944,8 @@ textarea{
 .app_news_carousel-slide-card-text{
   position: absolute;
   border-radius: 20px;
-  top: -21.5px;
-  width: 320px;
+  top: 0;
+  width: 100%;
   height: 300px;
   font-size: 23px;
   color: #FFFFFF;
@@ -1896,10 +1954,12 @@ textarea{
   justify-content: center;
   text-align: center;
   line-height: 25px;
-  font-weight: 700;
+  font-weight: 900;
   background-color: rgba(0, 0, 0, .6);
   white-space: normal;
   cursor: pointer;
+  font-family: 'K2D', sans-serif;
+  text-transform: none;
 }
 .app_new_carousel-arrows{
   margin-top: 20px;
@@ -1910,14 +1970,16 @@ textarea{
   background-color: var(--color-blue);
   color: #FFF;
   cursor: pointer;
-  opacity: 0.7;
 }
 .app_news_carousel-slide-card-date{
-  font-weight: 700;
-  font-size: 17px;
+  font-weight: 900;
+  font-size: 15px;
   line-height: 30px;
   text-align: center;
-  color: #D3D8EC;
+  color: #FFF;
+  text-transform: none;
+  padding-top: 8px;
+  
 }
 .app_new_carousel-arrows-back:hover, .app_new_carousel-arrows-foward:hover{
   opacity: 1;
@@ -1929,8 +1991,6 @@ textarea{
   background-color: var(--color-blue);
   color: #FFF;
   cursor: pointer;
-  opacity: 0.7;
-
 }
 @media screen and (max-width: 600px) {
   .app_newsScreen-page-title{
@@ -1995,13 +2055,13 @@ textarea{
   margin-bottom: 30px;
 }
 .app_postdetail-container{
-  width: 60%;
+  width: 67%;
 }
 .app_postdetail-side-nav{
-  width: 36%;
+  width: 28%; 
 }
 .app_postdetail-title{
-  font-weight: 700;
+  font-weight: 900;
   font-size: 40px;
   line-height: 90%;
   color: #283B91;
@@ -2010,15 +2070,15 @@ textarea{
   margin-bottom: 0px;
 }
 .app_postdetail-content-sub-title{
-  font-weight: 700;
+  font-weight: 900;
   font-size: 35px;
   line-height: 90%;
-  color: #283B91;
+  color: #768899;
   font-family: 'K2D', sans-serif;
   text-align: left;
 }
 .app_postdetail-content-sub-title-2{
-  font-weight: 700;
+  font-weight: 900;
   font-size: 32px;
   line-height: 90%;
   color: #283B91;
@@ -2032,18 +2092,19 @@ textarea{
   margin: 0 0 0 auto;
 }
 .app_postdetail-date{
-  font-weight: 700;
+  font-weight: 900;
   font-size: 15px;
   line-height: 30px;
   color: #283B91;
   text-align: left;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 .app_postdetail-cover{
   border-radius: 20px;
   width: 100%;
 }
 .app-postdetail-post-content-text{
-  font-size: 18px;
   line-height: 21px;
   text-align: left;
   color: #768899;
@@ -2057,10 +2118,12 @@ textarea{
 }
 .app_postdetail-side-nav-recentPosts-title{
   text-align: start;
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 900;
+  font-size:20px;
   line-height: 30px;
   color: #283B91;
+  margin-bottom: 10px;
+  margin-top: 45px;
 }
 .app_postdetail-side-nav-recentPosts-post{
   display: flex;
@@ -2079,16 +2142,20 @@ textarea{
   height: 120px;
 }
 .app_postdetail-side-nav-recentPosts-post-description-text{
-  font-weight: 700;
+  margin-top: 8px;
+  font-weight: 900;
   font-size: 10px;
-  line-height: 30px;
   color: #283B91;
+  text-transform: none;
 }
 .app_postdetail-side-nav-recentPosts-post-description-title{
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 17px;
-  color: #768899;
+  color: #283B91;
+  margin-bottom: 8px;
+  font-family: 'K2D', sans-serif;
+  text-transform: none;
 }
 .app_postdetail-container-back{
   text-align: left;
@@ -2116,6 +2183,7 @@ textarea{
   width: 100%;
   margin: 0 auto;
   position: relative;
+  box-shadow: 0px 0px 20px 3px rgba(123, 188, 255, 0.07);
 }
 .app_postdetail-searchBar{
   width: 100%;
@@ -2161,6 +2229,8 @@ textarea{
   margin-bottom: 10px;
   font-weight: bold;
   cursor: pointer;
+  color: #283B91;
+  text-transform: none;
 }
 .app_postdetail-input-result-option:hover{
   color: rgba(40, 59, 145, .5);

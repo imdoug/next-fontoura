@@ -38,8 +38,9 @@ export default function Slider({reviews}) {
                         </div>
                         <div className='app_carousel-container_content'>
                             {i18n.language === 'en' 
-                            ?   <p><ImQuotesLeft className='quotes-l' size={28}/> {reviews[index].review} <ImQuotesRight className='quotes-r' size={28}/></p> 
-                            :   <p><ImQuotesLeft className='quotes-l' size={28}/> {reviews[index].localizations[0].review} <ImQuotesRight className='quotes-r' size={28}/></p>}                              <h2>{reviews[index].name}</h2>
+                            ?   <p>{reviews[index].review}</p> 
+                            :   <p>{reviews[index].localizations[0].review}</p>}                              
+                            <h2>{reviews[index].name}</h2>
                         </div>
                   </div>
                   </div>

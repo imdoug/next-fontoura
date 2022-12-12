@@ -60,6 +60,7 @@ const PostDetail = ({post}) => {
                       className="app_postdetail-cover"
                       src={post.featuredImage.url}
                       alt={post.title}
+                      style={{marginBottom: 20}}
                     />
                 </div>
                 <div className='app_postdetail-container-content'>

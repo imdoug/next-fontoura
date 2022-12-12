@@ -111,6 +111,5 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
     `;
   
     const result = await request(graphqlAPI, query, { slug });
-  
     return result.post;
   };

@@ -15,6 +15,7 @@ const NewsScreen = ({posts}) => {
   }, [])
   return (
     <>
+    <div style={{marginBottom: 40}}></div>
     <div className="app_newsScreen-container">
       <div className="app_newsScreen-page-title" style={{display: 'flex'}}>
         <p className="app_newsScreen-page-title-text" >{t("newsScreen-title")}<span>.</span></p>
@@ -33,6 +34,9 @@ const NewsScreen = ({posts}) => {
         </div>
       </div>
       <NewsCarousel posts={posts}/>
+      <div style={{marginBottom: 20}}></div>
+      <div className='hr' style={{height: 2, backgroundColor:'#FFF', margin: '0 auto', width: '95%',}}/>
+      <div style={{marginBottom: 20}}></div>
       <div className="app_newsScreen-news-container">
         {posts.map((post)=>(
           <CustomPost post={post.node} key={post.node.slug} />
@@ -41,6 +45,7 @@ const NewsScreen = ({posts}) => {
           <CustomPost post={post.node}  key={post.node.slug}  />
         ))}
       </div>
+      <div style={{marginBottom: 60}}></div>
   </div>
     <Footer/> 
     </>
