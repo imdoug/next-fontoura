@@ -25,20 +25,26 @@ export default function PostNewsScreen ({posts, post}){
     </>
   )
 };
-export async function  getStaticProps({locale}){
-  // const data = await getPostDetails(context.params.slug)
-  // const posts  = await getPosts()
+export async function  getStaticProps({params, locale}){
+  const data = await getPostDetails(params.slug)
+  const posts  = await getPosts()
   return {
-    props: { //post: data, posts,//
+    props: { post: data, posts,
       ...(await serverSideTranslations(locale, ['home'])),
     },
   }
 }
 
-export async function  getStaticPaths(){
+export async function  getStaticPaths({locales}){
   const posts  = await getPosts()
   return {
-    paths: posts.map(({node: {slug}}) => ({params: {slug}})),
+    paths: locales
+      .map((locale) => {
+        return posts.map(({node: {slug}}) => (
+          {params: {slug}, locale}
+        ));
+      })
+      .flat(),
     fallback: true,
   }
 }
